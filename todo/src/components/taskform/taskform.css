@@ -1,0 +1,14 @@
+
+.container{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column !important;  
+}
+
+
+
+#description{
+    height: 100px;
+    font-size: medium;
+}
