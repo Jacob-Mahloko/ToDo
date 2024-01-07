@@ -4,9 +4,10 @@
     border: 2px solid;
     border-radius: 8px;
     padding: 16px;
-    margin: 16px;
+    margin: 2px;
     text-align: left;
     width: 33%;
+    flex-wrap: wrap;
   }
   
   
