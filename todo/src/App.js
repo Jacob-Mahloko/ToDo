@@ -1,10 +1,4 @@
-import './App.css';
-import NotFound from './components/NotFound/NotFound';
-import Login from './components/login/Login';
-import Signup from './components/signup/Signup';
-import TaskForm from './components/taskform/taskform';
-import Task from './components/Task/Task';
-
+import {Task,Signup,Login,TaskForm} from './Pages/index' 
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 function App() {
   return (
