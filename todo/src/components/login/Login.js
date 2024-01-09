@@ -15,6 +15,7 @@ export default function Login() {
         <NavBar/>
         <div className='containerLogin'>
         <form onSubmit={submitForm}> 
+            <h3>Login details:</h3>
             <label htmlFor='username'>username</label>
             <input type='text' id='username' onChange={(e)=>{setUsername(e.target.value)}}/>
             <label htmlFor='password'>password</label>
