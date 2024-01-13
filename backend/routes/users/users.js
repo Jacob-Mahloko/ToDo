@@ -9,7 +9,7 @@ router.use(express.json());
 
 //user list
 const users=[
-    {id:0,username:'Jacob123',password:'password'}
+    {id:0,username:process.env['USERNAM'],password:process.env['PASSWORD']}
 ]
 
 //users endppoint

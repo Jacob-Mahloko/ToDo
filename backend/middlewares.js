@@ -1,18 +1,15 @@
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
-
-
-
 const authToken=(req,res,next)=>{
     
-    const token = req.headers.authorization && req.headers.authorization.split(' ')[1];
-    console.log(token)
+  const token =req.headers.authorization && req.headers.authorization.split(' ')[1];
+
   if (!token) {
     return res.status(401).json({ message: 'Unauthorized' });
   }
 
-  console.log(process.env['SECRET'])
+  
   jwt.verify(token, process.env['SECRET'],(err, user) => {
     if (err) {
         console.log(err)
