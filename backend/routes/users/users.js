@@ -9,17 +9,20 @@ router.use(express.json());
 
 //user list
 const users=[
-    {id:0,username:process.env['USERNAM'],password:process.env['PASSWORD']}
 ]
 
+
+router.post('/signup',(req,res)=>{
+
+})
 //users endppoint
-router.post('/',(req,res) =>{
+router.post('/login',(req,res) =>{
     const { username, password } = req.body;
     console.log(req.body)
     const user = users.find(u => u.username === username && u.password === password);
   
     if (user) {
-      const token = jwt.sign({ userId: user.id }, process.env['SECRET'], { algorithm: 'HS256' },{ expiresIn: '1h' });
+      const token = jwt.sign({ userId: user.id }, process.env['SECRET'], { algorithm: 'HS256' },{ expiresIn: '1om' });
       res.json({ token });
     } else {
       res.status(401).json({ message: 'Invalid credentials' });
