@@ -1,0 +1,37 @@
+/signup
+
+{
+    "username":"Jacob123",
+    "email":"email@gmail.com",
+    "password":"password"
+}
+
+post '/course/register'
+{
+    "username":"jacob123",
+    "courses":["COS330","COS332"]
+}
+
+
+post /course/add-task
+{
+    "username":"jacob123",
+    "tasks":[{
+        "course":"COS332",
+        "tasks":
+        [{"title":"COS332","description":"Urgent","due_date":"2023-07-09"}]
+    }]
+}
+
+get /get-tasks
+
+{
+    "username":"",
+    "course":""
+}
+
+get /tasks
+
+{
+    "username":""
+}

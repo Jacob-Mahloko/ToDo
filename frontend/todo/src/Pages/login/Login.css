@@ -5,7 +5,11 @@
     justify-content: center;
     flex-direction: column;
     width: 100% !important;
+    margin: auto;
+    
+    
 }
+
 
 .containerLogin form{
     display: flex;
@@ -13,15 +17,21 @@
     align-content: center;
     justify-content: center;
     flex-direction: column;
-    width:300px;
-    height: 300px;
-    padding: 5px;
+    
+    width:400px;
+    height: 400px;
+    margin-top: 5%;
+    padding:20px;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    font-size: 24px;
 }
 
 input{
     margin: 8px;
     width :294px;
-    height: 30px;
+    height: 60px;
     font-size: 20px;
 }
 
@@ -29,10 +39,20 @@ button{
     width:300px ;
     height: 50px;
     font-size: 20px;
+    font-weight: bold;
+    color:white;
+    background-color: rgb(238, 150, 19);
+    border-color:  rgb(238, 150, 19);
 }
 
-.containerLogin form h3{
+button:hover{
+    border-color: aliceblue;
+}
+
+.containerLogin form h3 {
     color: rgb(106, 109, 111);
+    position: relative;
+    left:-100px;
 }
 
 

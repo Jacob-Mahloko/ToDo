@@ -3,3 +3,5 @@ import Signup from "./signup/Signup";
 import Task from "./Task/Task";
 import TaskForm from "./taskform/taskform";
 import NotFound from "./NotFound/NotFound";
+
+export {Login, Signup, Task, TaskForm, NotFound}
