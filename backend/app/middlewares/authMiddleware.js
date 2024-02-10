@@ -3,7 +3,6 @@ const user = require('../models/users');
 
 
 require('dotenv').config()
-console.log(process.env.SECRET)
 const requireAuth = (req, res, next) => {
   const token = req.cookies.jwt;
 

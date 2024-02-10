@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 
 // database connection
 
-const dbURI = 'mongodb://localhost:27017/snackieDB';
+const dbURI = process.env.MongoDBConnString;
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
   .then((result) => app.listen(3005))
   .catch((err) => console.log(err));
