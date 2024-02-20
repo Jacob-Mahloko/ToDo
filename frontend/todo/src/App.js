@@ -1,7 +1,9 @@
 import {Task,Signup,Login,TaskForm,NotFound} from './Pages/index' 
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
+
 function App() {
   return (
+  
     <Router>
       <Routes>
         <Route path="/" exact element={<Login />}/>
@@ -11,8 +13,7 @@ function App() {
         <Route path='/tasks' element={<Task/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
-    </Router>
-    
+    </Router>    
   );
 }
 

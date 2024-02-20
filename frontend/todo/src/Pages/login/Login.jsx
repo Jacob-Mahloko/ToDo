@@ -1,33 +1,61 @@
 import React, { useState } from 'react';
-import NavBar from '../NavBar/NavBar';
-import {loginValidation} from '../../Validations/Validation';
+import Footer from '../../Components/footer/footer';
 import './Login.css'
+import { useAuthStateContext,useAuth, useAuthActionContext } from '../../providers/authProvider/Index';
 
 
 export default function Login() {
 
   const [username,setUsername]=useState('');
   const [password,setPassword]=useState('');
-  
+  const [email,setEmail]=useState('');
+  const status=useAuthStateContext();
+  const {login,logout}=useAuthActionContext();
 
-  
-  const submitForm=()=>{
-    console.log(username,password)
+  console.log(status);
+  const writeDataToLocalStorage=()=>{
+    let users=[
+      {
+        username:'user1',
+        password:'password1'
+      },
+      {
+        username:'user2',
+        password:'password2'
+      },
+      {
+        username:'user3',
+        password:'password3'
+      }
+    ];
+
+    users=JSON.stringify(users)
+    localStorage.setItem('users',users);
+  }
+
+  writeDataToLocalStorage()
+
+  const submitForm=(e)=>{
+    e.preventDefault()
+    login(username,password);
   }
 
   return (
-    <div className='Login'>
-        <NavBar/>
-        <div className='containerLogin'>
+      <div className='containerLogin'>
         <form onSubmit={submitForm}> 
-            <h3 className='login-heading' id='login-heading'>Login details</h3>
+              <h3 className='login-heading' id='login-heading'>Login</h3>
             <label htmlFor='username'>username</label>
-            <input type='text' id='username' onChange={(e)=>{setUsername(e.target.value)}}/>
+            <input placeholder="username" type='text' id='username' onChange={(e)=>{setUsername(e.target.value)}}/>
+            <label htmlFor='email'>email</label>
+            <input placeholder="email" type="text" id="email" onChange={(e)=>{setEmail(e.target.value)}} />
             <label htmlFor='password'>password</label>
-            <input type='password' id='password' onChange={(e)=>{setPassword(e.target.value)}}/>
+            <input placeholder="password" type='password' id='password' onChange={(e)=>{setPassword(e.target.value)}}/>
             <button type='submit'>Login</button>
+            <span><a href="/">Forgot Password?</a>|<a href="/">Sign Up</a></span>
         </form>
-        </div>
-    </div>
+
+        <Footer/>
+       </div>
+
   )
-}
+};

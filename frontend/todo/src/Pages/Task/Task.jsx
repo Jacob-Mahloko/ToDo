@@ -1,6 +1,6 @@
 import React from 'react'
 import './Task.css'
-import NavBar from '../NavBar/NavBar'
+import NavBar from '../../Components/NavBar/NavBar'
 import Tile from '../Tile/Tile'
 export default function Task() {
 
