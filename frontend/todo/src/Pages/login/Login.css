@@ -12,47 +12,53 @@
 
 
 .containerLogin form{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    
-    width:400px;
-    height: 400px;
+    width:300px;
+    height: 250px;
     margin-top: 5%;
-    padding:20px;
-    border: 2px solid black;
+    padding-bottom:50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid rgb(25, 25, 25);
     border-radius: 5px;
 
     font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float:left;
+    background-color: rgb(255, 255, 255);
+}
+
+label {
+   margin-left:5px ;
 }
 
 input{
-    margin: 8px;
-    width :294px;
-    height: 60px;
+    width :250px;
+    height: 30px;
     font-size: 20px;
+    margin: 5px;
 }
 
 button{
-    width:300px ;
-    height: 50px;
+    width:150px ;
+    height: 30px;
     font-size: 20px;
     font-weight: bold;
     color:white;
     background-color: rgb(238, 150, 19);
     border-color:  rgb(238, 150, 19);
+    position: relative;
+    margin-top: 5px;
+    left:110px;
+    border-radius: 5px;
+
 }
 
 button:hover{
-    border-color: aliceblue;
+    border-color: darkgray;
 }
 
-.containerLogin form h3 {
-    color: rgb(106, 109, 111);
-    position: relative;
-    left:-100px;
+#login-heading {
+    color:rgb(25, 25, 25);
 }
 
 
