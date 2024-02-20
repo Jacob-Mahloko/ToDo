@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import NavBar from '../NavBar/NavBar';
+import React, { useState } from 'react';
+import Footer from '../../Components/footer/footer';
+
 import './Login.css'
 
 
@@ -14,22 +15,19 @@ export default function Login() {
   }
 
   return (
-    <div className='Login'>
-        <NavBar/>
-        <div className='containerLogin'>
+      <div className='containerLogin'>
         <form onSubmit={submitForm}> 
-            <h3 className='login-heading' id='login-heading'>Login details</h3>
+              <h3 className='login-heading' id='login-heading'>Login</h3>
             <label htmlFor='username'>username</label>
-            <input type='text' id='username' onChange={(e)=>{setUsername(e.target.value)}}/>
+            <input placeholder="username" type='text' id='username' onChange={(e)=>{setUsername(e.target.value)}}/>
             <label htmlFor='email'>email</label>
-            <input type="text" id="email" onChange={(e)=>{setEmail(e.target.value)}} />
+            <input placeholder="email" type="text" id="email" onChange={(e)=>{setEmail(e.target.value)}} />
             <label htmlFor='password'>password</label>
-            <input type='password' id='password' onChange={(e)=>{setPassword(e.target.value)}}/>
+            <input placeholder="password" type='password' id='password' onChange={(e)=>{setPassword(e.target.value)}}/>
             <button type='submit'>Login</button>
+            <span><a href="/">Forgot Password?</a>|<a href="/">Sign Up</a></span>
         </form>
-        </div>
-       
-
-    </div>
+        <Footer/>
+       </div>
   )
-}
+};
