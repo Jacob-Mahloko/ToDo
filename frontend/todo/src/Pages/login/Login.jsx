@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import NavBar from '../NavBar/NavBar';
 import './Login.css'
+import { useAuthStateContext,useAuth, useAuthActionContext } from '../../providers/authProvider/Index';
 
 
 export default function Login() {
@@ -8,9 +9,35 @@ export default function Login() {
   const [username,setUsername]=useState('');
   const [password,setPassword]=useState('');
   const [email,setEmail]=useState('');
-  
-  const submitForm=()=>{
-    console.log(username,email,password)
+  const status=useAuthStateContext();
+  const {login,logout}=useAuthActionContext();
+
+  console.log(status);
+  const writeDataToLocalStorage=()=>{
+    let users=[
+      {
+        username:'user1',
+        password:'password1'
+      },
+      {
+        username:'user2',
+        password:'password2'
+      },
+      {
+        username:'user3',
+        password:'password3'
+      }
+    ];
+
+    users=JSON.stringify(users)
+    localStorage.setItem('users',users);
+  }
+
+  writeDataToLocalStorage()
+
+  const submitForm=(e)=>{
+    e.preventDefault()
+    login(username,password);
   }
 
   return (
@@ -28,8 +55,6 @@ export default function Login() {
             <button type='submit'>Login</button>
         </form>
         </div>
-       
-
     </div>
   )
 }
