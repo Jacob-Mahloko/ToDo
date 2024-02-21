@@ -29,9 +29,8 @@ export const AuthProvider=(props)=>{
 
 export const useAuthStateContext=()=>{
     const context=useContext(AuthStateContext);
-    //return (context?context:()=>alert('Error: Cannot access out AuthProvider'));
-    //console.log(context)
-    return context;
+    return (context?context:()=>alert('Error: Cannot access out AuthProvider'));
+    
 }
 
 export const useAuthActionContext=()=>{
