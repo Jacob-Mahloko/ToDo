@@ -1,3 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
 .containerLogin{
     display: flex;
     align-items: center;
@@ -5,54 +12,66 @@
     justify-content: center;
     flex-direction: column;
     width: 100% !important;
+    height:100%;
     margin: auto;
-    
-    
 }
 
 
 .containerLogin form{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    
-    width:400px;
-    height: 400px;
-    margin-top: 5%;
-    padding:20px;
-    border: 2px solid black;
-    border-radius: 5px;
-
-    font-size: 24px;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 80px 50px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.5);
+    font-size: 24px;   
 }
-
 input{
-    margin: 8px;
-    width :294px;
-    height: 60px;
+    
+    width :300px;
+    height: 40px;
     font-size: 20px;
+
+}
+label{
+    font-size:20px;
+    color:
+}
+label{
+    font-size:20px;
+    color:
 }
 
 button{
-    width:300px ;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:305px ;
     height: 50px;
     font-size: 20px;
     font-weight: bold;
     color:white;
     background-color: rgb(238, 150, 19);
     border-color:  rgb(238, 150, 19);
+    position: relative;
+    margin-top: 5px;
+    left:110px;
+    border-radius: 5px;
+
 }
 
 button:hover{
     border-color: aliceblue;
+    background-color: #ffff;
+    color: rgb(238, 150, 19);
 }
 
 .containerLogin form h3 {
-    color: rgb(106, 109, 111);
+    color:  #ffff;
     position: relative;
-    left:-100px;
+    text-align: center;
 }
 
 

@@ -1,0 +1,12 @@
+.footer-container{
+    position: absolute;
+    bottom:0;
+    background-color:rgb(238, 150, 19);
+    width:100%;
+    height:10%;
+
+}
+.footer-container h4{
+    text-align: center;
+    font-size: 18px;
+}
