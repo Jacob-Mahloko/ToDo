@@ -8,15 +8,10 @@ export default function Login() {
 
   const [username,setUsername]=useState('');
   const [password,setPassword]=useState('');
-  const [email,setEmail]=useState('');
-  const status=useAuthStateContext();
-  const {login,logout}=useAuthActionContext();
+  const status=useAuthStateContext();//indicates if user is authenticated
+  const {login,logout}=useAuthActionContext();//auth functions
 
-
-  
-
-  writeDataToLocalStorage()
-
+  //addition of validators
   const submitForm=(e)=>{
     e.preventDefault()
     login(username,password);
@@ -28,8 +23,6 @@ export default function Login() {
               <h3 className='login-heading' id='login-heading'>Login</h3>
             <label htmlFor='username'>username</label>
             <input placeholder="username" type='text' id='username' onChange={(e)=>{setUsername(e.target.value)}}/>
-            <label htmlFor='email'>email</label>
-            <input placeholder="email" type="text" id="email" onChange={(e)=>{setEmail(e.target.value)}} />
             <label htmlFor='password'>password</label>
             <input placeholder="password" type='password' id='password' onChange={(e)=>{setPassword(e.target.value)}}/>
             <button type='submit'>Login</button>
