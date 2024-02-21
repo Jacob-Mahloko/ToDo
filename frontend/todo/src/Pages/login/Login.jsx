@@ -11,6 +11,7 @@ export default function Login() {
   const status=useAuthStateContext();//indicates if user is authenticated
   const {login,logout}=useAuthActionContext();//auth functions
 
+  console.log(status);
   //addition of validators
   const submitForm=(e)=>{
     e.preventDefault()
